@@ -185,8 +185,9 @@ p {
 .navbar-side {
   margin-left: 15px;
   border-right: 1px solid rgba(255, 255, 255, 0.158);
-  width: 360px;
+  width: 310px;
   height: 100vh;
+  position: fixed;
 }
 
 .navbar-side div {
@@ -241,6 +242,7 @@ p {
   display: flex;
   justify-content: center;
   padding-top: 40px;
+  padding-left: 310px;
 }
 /* END of Main Container Settings */
 
@@ -248,6 +250,7 @@ p {
 .reel-bar {
   display: flex;
   flex-direction: row;
+  margin-bottom: 60px;
 }
 
 .reel-bar div {
@@ -270,18 +273,140 @@ p {
 /* END of Reelbar Settings */
 
 /* START of Content(JavaScript) Settings */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.card {
+  width: 450px;
+}
 
+.card-title-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
+.card-title-row-img1 {
+  height: 45px;
+  width: 45px;
+  border-radius: 40px;
+  margin-right: 10px;
+  object-fit: cover;
+}
 
+.card-title-row img:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 2px #A7A7A7);
+}
 
+.card-title-row-div {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+}
 
+.card-title-row span {
+  font-size: 12px;
+  color: #A7A7A7;
+}
 
+.card-title-row p {
+  font-size: 12px;
+  font-weight: 600;
+}
 
+.card-title-row p:hover {
+  cursor: pointer;
+}
+
+.card-image img {
+  height: auto;
+  width: 450px;
+  border-radius: 8px;
+}
+
+.card-icon-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0px;
+}
+
+.card-icon-row img {
+  height: 26px;
+  width: 26px;
+}
+
+.card-icon-row img:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 2px #A7A7A7);
+}
+
+.icon-margin img {
+  margin-right: 15px;
+}
+
+.card-likes {
+  margin: 0px 0px 8px 0px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-likes span:hover {
+  cursor: pointer;
+}
+
+.card-comments p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 10px;
+  margin-bottom: 4px;
+}
+
+.card-comments p:hover {
+  cursor: pointer;
+}
+
+.card-comments span {
+  font-size: 14px;
+  color: #d4d4d4;
+  margin-bottom: 4px;
+}
+
+.card-comments div {
+  display: flex;
+}
+
+.card-input input {
+  display: flex;
+  width: 440px;
+  margin: 12px 0px 24px 0px;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.card-input input::placeholder {
+  font-weight: 500;
+  color: #A7A7A7;
+  font-size: 14px;
+}
+
+.div-border {
+  display: flex;
+  height: 1px;
+  min-height: 1px;
+  background-color: rgba(255, 255, 255, 0.158);
+  width: 450px;
+  margin-bottom: 25px;
+}
 /* END of Content(JavaScript) Settings */
 
 /* START of Suggestion Settings */
-
 .suggestions-side {
   display: flex;
   flex-direction: column;
@@ -373,5 +498,4 @@ p {
   font-size: 14px;
   margin-top: 20px;
 }
-
 /* END of Suggestion Settings */

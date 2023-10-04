@@ -12,9 +12,8 @@
     />
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="render()">
     <div class="body-container">
-
       <div class="navbar-side">
         <div class="heading-div"><h1>Instagram</h1></div>
         <div>
@@ -81,27 +80,146 @@
       <div class="main-container">
         <div class="content-container">
           <div class="reel-bar">
-            <div><img src="./img/reel1.PNG" alt="Reel Bild"><span>kbr.tk</span></div>
-            <div><img src="./img/reel2.PNG" alt="Reel Bild"><span>ruffy.d</span></div>
-            <div><img src="./img/reel3.PNG" alt="Reel Bild"><span>bonnie.ink</span></div>
-            <div><img src="./img/reel4.PNG" alt="Reel Bild"><span>alberto</span></div>
-            <div><img src="./img/reel5.PNG" alt="Reel Bild"><span>cr777</span></div>
-            <div><img src="./img/reel6.PNG" alt="Reel Bild"><span>zh.b</span></div>
-            <div><img src="./img/reel7.PNG" alt="Reel Bild"><span>lucianoo</span></div>
-            <div><img src="./img/reel8.PNG" alt="Reel Bild"><span>sndyZH</span></div>
+            <div>
+              <img src="./img/reel1.PNG" alt="Reel Bild" /><span>kbr.tk</span>
+            </div>
+            <div>
+              <img src="./img/reel2.PNG" alt="Reel Bild" /><span>ruffy.d</span>
+            </div>
+            <div>
+              <img src="./img/reel3.PNG" alt="Reel Bild" /><span
+                >bonnie.ink</span
+              >
+            </div>
+            <div>
+              <img src="./img/reel4.PNG" alt="Reel Bild" /><span>alberto</span>
+            </div>
+            <div>
+              <img src="./img/reel5.PNG" alt="Reel Bild" /><span>cr777</span>
+            </div>
+            <div>
+              <img src="./img/reel6.PNG" alt="Reel Bild" /><span>zh.b</span>
+            </div>
+            <div>
+              <img src="./img/reel7.PNG" alt="Reel Bild" /><span>lucianoo</span>
+            </div>
+            <div>
+              <img src="./img/reel8.PNG" alt="Reel Bild" /><span>sndyZH</span>
+            </div>
           </div>
-          <div class="content" id="content"></div>
+          <div class="cards" id="cards">
+            <div class="card" id="card">
+              <div class="card-title-row">
+                <img
+                  class="card-title-row-img1"
+                  src="./img/icons/seck.jpg"
+                  alt="Account Bild"
+                />
+                <div class="card-title-row-div">
+                  <p>seckin.ap</p>
+                  <span>Zürich</span>
+                </div>
+                <img
+                  class="white-outline"
+                  src="./img/icons/dots.svg"
+                  alt="Punkte Icon"
+                />
+              </div>
+              <div class="card-image">
+                <img src="./img/icons/seck.jpg" alt="Account Bild" />
+              </div>
+              <div class="card-icon-row white-outline">
+                <div class="icon-margin">
+                  <img src="./img/icons/heart.svg" alt="Herz Icon" /><img
+                    src="./img/icons/comment.svg"
+                    alt="Chat Icon"
+                  /><img src="./img/icons/share.svg" alt="Teilen Icon" />
+                </div>
+                <div>
+                  <img src="./img/icons/bookmark.svg" alt="Buchmarke Icon" />
+                </div>
+              </div>
+              <div class="card-likes"><span>Gefällt 31.568 Mal</span></div>
+              <div class="card-comments">
+                <div>
+                  <p>raf_camora</p>
+                  <span>Nice Beat!!</span>
+                </div>
+                <div>
+                  <p>user777</p>
+                  <span
+                    >Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit.</span
+                  >
+                </div>
+              </div>
+              <div class="card-input">
+                <input type="text" placeholder="Kommentieren ..." max="250" />
+              </div>
+            </div>
+          </div>
         </div>
         <div class="suggestions-side">
-          <div class="suggestion-row"><img src="./img/icons/seck.jpg" alt="Account Bild"><div class="info-div"><p>seckin.ap</p><span>Seçkin Apaydin</span></div> <button>Wechseln</button></div>
-          <div class="special-row"><span>Vorschläge für dich</span><p>Alle ansehen</p></div>
-          <div class="suggestion-row"><img src="./img/random.jpg" alt="Account Bild"><div class="info-div"><p>tzn1992</p><span>Folgt dir</span></div><button>Folgen</button></div>
-          <div class="suggestion-row"><img src="./img/mari.jpg" alt="Account Bild"><div class="info-div"><p>420Enjoyer</p><span>mry.jne ist Follower</span></div><button>Folgen</button></div>
-          <div class="suggestion-row"><img src="./img/raf.PNG" alt="Account Bild"><div class="info-div"><p>raf_camora</p><span>skdn.dok und b0by sind F...</span></div><button>Folgen</button></div>
-          <div class="suggestion-row"><img src="./img/bitcoin.jpg" alt="Account Bild"><div class="info-div"><p>BTC.Master1000</p><span>Folgt dir</span></div><button>Folgen</button></div>
-          <div class="suggestion-row"><img src="./img/porsche.jpg" alt="Account Bild"><div class="info-div"><p>Komm-in-die-Grp</p><span>Vorschläge für dich</span></div><button>Folgen</button></div>
-          <div class="footer-text"><span>This website has been created solely to enhance my skills in JavaScript, especially with JSON arrays, CSS, and HTML. There are no commercial or online plans or uses for it.</span></div>
-          <div class="footer-div"> &copy; Seçkin Coskun 2023</div>
+          <div class="suggestion-row">
+            <img src="./img/icons/seck.jpg" alt="Account Bild" />
+            <div class="info-div">
+              <p>seckin.ap</p>
+              <span>Seçkin Apaydin</span>
+            </div>
+            <button>Wechseln</button>
+          </div>
+          <div class="special-row">
+            <span>Vorschläge für dich</span>
+            <p>Alle ansehen</p>
+          </div>
+          <div class="suggestion-row">
+            <img src="./img/random.jpg" alt="Account Bild" />
+            <div class="info-div">
+              <p>tzn1992</p>
+              <span>Folgt dir</span>
+            </div>
+            <button>Folgen</button>
+          </div>
+          <div class="suggestion-row">
+            <img src="./img/mari.jpg" alt="Account Bild" />
+            <div class="info-div">
+              <p>420Enjoyer</p>
+              <span>mry.jne ist Follower</span>
+            </div>
+            <button>Folgen</button>
+          </div>
+          <div class="suggestion-row">
+            <img src="./img/raf.PNG" alt="Account Bild" />
+            <div class="info-div">
+              <p>raf_camora</p>
+              <span>skdn.dok und b0by sind F...</span>
+            </div>
+            <button>Folgen</button>
+          </div>
+          <div class="suggestion-row">
+            <img src="./img/bitcoin.jpg" alt="Account Bild" />
+            <div class="info-div">
+              <p>BTC.Master1000</p>
+              <span>Folgt dir</span>
+            </div>
+            <button>Folgen</button>
+          </div>
+          <div class="suggestion-row">
+            <img src="./img/porsche.jpg" alt="Account Bild" />
+            <div class="info-div">
+              <p>Komm-in-die-Grp</p>
+              <span>Vorschläge für dich</span>
+            </div>
+            <button>Folgen</button>
+          </div>
+          <div class="footer-text">
+            <span
+              >This website has been created solely to enhance my skills in
+              JavaScript, especially with JSON arrays, CSS, and HTML. There are
+              no commercial or online plans or uses for it.</span
+            >
+          </div>
+          <div class="footer-div">&copy; Seçkin Coskun 2023</div>
         </div>
       </div>
     </div>
