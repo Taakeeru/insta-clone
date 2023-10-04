@@ -171,6 +171,11 @@ p {
   display: none;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .body-container {
   display: flex;
 }
@@ -180,7 +185,7 @@ p {
 .navbar-side {
   margin-left: 15px;
   border-right: 1px solid rgba(255, 255, 255, 0.158);
-  width: 260px;
+  width: 360px;
   height: 100vh;
 }
 
@@ -215,7 +220,6 @@ p {
 .navbar-side img {
     height: 30px;
     width: auto;
-    background-color: white;
     margin: 5px 10px 5px 0px;
     border-radius: 20px;
 }
@@ -283,23 +287,91 @@ p {
   flex-direction: column;
   padding-left: 80px;
   height: 100vh;
-  margin-top: 20px;
+  margin-top: 10px;
+  width: 300px;
+}
+
+.suggestion-row {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.special-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px 15px 0px;
+}
+
+.special-row p:hover {
+  color: #A7A7A7;
+}
+
+.special-row span {
+  font-size: 14px !important;
 }
 
 .flex {
   display: flex;
 }
 
+.info-div {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .suggestions-side img {
   height: 45px;
-  width: auto;
+  width: 45px;
   border-radius: 40px;
   margin-right: 10px;
+  object-fit: cover;
 }
 
+.suggestions-side span {
+  font-size: 12px;
+  color: #A7A7A7;
+}
 
+.suggestions-side p {
+  font-size: 12px;
+  font-weight: 600;
+}
 
+.suggestions-side p:hover {
+  cursor: pointer;
+}
 
+.suggestions-side button {
+  background-color: black;
+  color: #0072BD;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.suggestions-side button:hover {
+  color: azure;
+  cursor: pointer;
+}
+
+.footer-text {
+  margin-top: 20px;
+}
+
+.footer-text span {
+  color: #A7A7A7;
+  font-size: 12px;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-div {
+  color: #A7A7A7;
+  font-size: 14px;
+  margin-top: 20px;
+}
 
 /* END of Suggestion Settings */
