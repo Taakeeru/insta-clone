@@ -283,6 +283,14 @@ p {
   width: 450px;
 }
 
+.card a {
+  color: #0072BD;
+}
+
+.card a:hover {
+  cursor: pointer;
+}
+
 .card-title-row {
   display: flex;
   align-items: center;
@@ -356,6 +364,31 @@ p {
 
 .card-likes span:hover {
   cursor: pointer;
+}
+
+.card-description {
+  display: flex;
+  margin: 0;
+}
+
+.card-description span {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-hashtags {
+  display: flex;
+  margin: 0;
+}
+
+.card-hashtags a {
+  font-size: 14px;
+  margin: 0;
+}
+
+.card-comments {
+  margin-top: 4px;
 }
 
 .card-comments p {
