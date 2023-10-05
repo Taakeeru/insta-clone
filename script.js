@@ -63,7 +63,6 @@ function render() {
             comments.innerHTML += commentTemplate(comment['name'], comment['comment']);
             
         }
-        
         addButtonToCard(i);
     }
 }
@@ -83,15 +82,30 @@ function changeLike() {
 
 }
 
-function addButtonToCard(index) {
-  let input = document.getElementById(`card-input${index}`);
-  let button = document.getElementById(`card-button${index}`);
 
-      if (input.value !== '') {
-        button.classList.remove('d-none');
+// function addButtonToCard(i) {
+//   let input = document.getElementById(`card-input${i}`);
+//   let button = document.getElementById(`card-button${i}`);
+
+//   input.addEventListener('input', function() {
+//     if (input.value.trim() === '') {
+//       button.classList.add('d-none');
+//     } else {
+//       button.classList.remove('d-none');
+//     }
+//   });
+// }
+
+
+function addButtonToCard(i) {
+  let input = document.getElementById(`card-input${i}`);
+  let button = document.getElementById(`card-button${i}`);
+
+      if (input.value == '') {
+        return button.classList.add('d-none');
       } else {
-        button.classList.add('d-none');
-      }
+        return button.classList.remove('d-none');
+      } 
 }
 
 
@@ -143,8 +157,8 @@ function cardTemplate(index, profileimg, name, location, image, likes, descripti
               <div class="card-comments" id="comments${index}">
               </div>
               <div class="card-input-div">
-                <input id="card-input${index}" type="text" placeholder="Kommentieren ..." max="250" />
-                <button class="card-input-div-button" id="card-button${index}">Posten</button>
+                <input value="" onchange="addButtonToCard(${index})" id="card-input${index}" type="text" placeholder="Kommentieren ..." max="250" />
+                <button class="card-input-div-button d-none" id="card-button${index}">Posten</button>
               </div>
               <div class="div-border">
               </div>
