@@ -11,7 +11,7 @@ let posts = [
         'likes': `${w}`,
         'description': 'The concept of JSON overwhelms me &#128555',
         'hashtags': '#SQL #Datamining',
-        'comments': [{'name': 'Jason Statham', 'comment': '&#128526'}, {'name': 'rndm.guy243', 'comment': 'I guess the JSON Array is not the only problem &#129315 &#129315'}, {'name': 'Jason Derulo', 'comment': 'Jaaasoon Deruloo &#127925'}]
+        'comments': [{'name': 'Jason Statham', 'comment': '&#128526 &#128526'}, {'name': 'rndm.guy243', 'comment': "I suspect the JSON Array isn't the sole issue you're facing. &#129315 &#129315"}, {'name': 'jason_derulo_official', 'comment': '&#127925 Jaaasoon Deruloo &#127925'}]
     },
     {   'profileimg': './img/devprofile.PNG',
         'author': 'Developer-Akademie',
@@ -21,7 +21,7 @@ let posts = [
         'likes': `${x}`,
         'description': 'Werde jetzt Software Developer mit unserer Hilfe! <a href="https://developerakademie.com">https://developerakademie.com</a> ',
         'hashtags': '',
-        'comments': [{'name': 'LifetimeHarzler', 'comment': 'Man kann niemals in 9 Monaten das lernen was andere in 4 Jahren lernen 100% SCAM!!'},{'name': 'bachelorOfBP','comment': 'Also ich habe Informatik studiert und bin jetzt Bierpongkönig und ja...'}]
+        'comments': [{'name': 'LifetimeHarzler', 'comment': 'Man kann niemals in 9 Monaten das lernen was andere in 4 Jahren lernen 100% SCAM!!'}, {'name': 'bachelorOfBP','comment': 'Also ich habe Informatik studiert und bin jetzt Bierpongkönig und ja...'}, {'name': 'katy.rzs','comment': 'Wieviel kostet die Weiterbildung??'}]
     },
     {   'profileimg': './img/profile-post3.jpg',
         'author': 'sndr.g',
@@ -41,7 +41,7 @@ let posts = [
         'likes': `${z}`,
         'description': '',
         'hashtags': '#Zürich #Hooka',
-        'comments': ['','']
+        'comments': ''
     }
 ];
 
@@ -53,7 +53,18 @@ function render() {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
         content.innerHTML += cardTemplate(i, post['profileimg'], post['author'], post['location'], post['image'], post['likes'], post['description'], post['hashtags']);
+
         
+
+        let comments = document.getElementById(`comments${i}`);
+
+        for (let j = 0; j < post['comments'].length; j++) {
+            const comment = post['comments'][j];
+            comments.innerHTML += commentTemplate(comment['name'], comment['comment']);
+            
+        }
+        
+        addButtonToCard(i);
     }
 }
 
@@ -70,6 +81,26 @@ function handleKeyPress() {
 
 function changeLike() {
 
+}
+
+function addButtonToCard(index) {
+  let input = document.getElementById(`card-input${index}`);
+  let button = document.getElementById(`card-button${index}`);
+
+      if (input.value !== '') {
+        button.classList.remove('d-none');
+      } else {
+        button.classList.add('d-none');
+      }
+}
+
+
+function commentTemplate(profilename, comment) {
+    return /*html*/`
+            <div>
+              <p>${profilename}</p>
+              <span>${comment}</span>
+            </div>`
 }
 
 
@@ -110,20 +141,10 @@ function cardTemplate(index, profileimg, name, location, image, likes, descripti
               <div class="card-description"><span>${description}</span></div>
               <div class="card-hashtags"><a>${hashtags}</a></div>
               <div class="card-comments" id="comments${index}">
-                <div>
-                  <p>raf_camora</p>
-                  <span>Nice Beat!!</span>
-                </div>
-                <div>
-                  <p>user777</p>
-                  <span
-                    >Lorem ipsum, dolor sit amet consectetur adipisicing
-                    elit.</span
-                  >
-                </div>
               </div>
-              <div class="card-input">
-                <input id="input${index}" type="text" placeholder="Kommentieren ..." max="250" />
+              <div class="card-input-div">
+                <input id="card-input${index}" type="text" placeholder="Kommentieren ..." max="250" />
+                <button class="card-input-div-button" id="card-button${index}">Posten</button>
               </div>
               <div class="div-border">
               </div>

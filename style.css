@@ -410,11 +410,16 @@ p {
 
 .card-comments div {
   display: flex;
+  align-items: center;
 }
 
-.card-input input {
+.card-input-div {
   display: flex;
-  width: 440px;
+}
+
+.card-input-div input {
+  display: flex;
+  width: 400px;
   margin: 12px 0px 24px 0px;
   background-color: black;
   color: white;
@@ -423,10 +428,24 @@ p {
   padding: 0;
 }
 
-.card-input input::placeholder {
+.card-input-div input::placeholder {
   font-weight: 500;
   color: #A7A7A7;
   font-size: 14px;
+}
+
+.card-input-div-button {
+  color: #0072BD;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: black;
+  border: none;
+  outline: none;
+}
+
+.card-input-div-button:hover {
+  cursor: pointer;
+  color: azure;
 }
 
 .div-border {
