@@ -83,9 +83,12 @@ function addComment(index) {
 }
 
 
-function handleKeyPress(index, event) {
+document.onkeyup = function handleKeyPress(event) {
   if (event.key === "Enter") {
-    return addComment(index);
+    const inputElement = event.target;
+    const index = parseInt(inputElement.id.match(/\d+/)[0]);
+    
+    addComment(index);
   }
 }
 
@@ -95,11 +98,10 @@ function changeLike() {
 }
 
 
-function toggleInputButton(i) {
-  let input = document.getElementById(`card-input${i}`);
+function toggleInputButton(i, inputElement) {
   let button = document.getElementById(`card-button${i}`);
 
-    if (input.value.trim() !== '') {
+    if (inputElement.value.trim() !== '') {
       button.classList.remove('d-none');
     } else {
       button.classList.add('d-none');
@@ -155,7 +157,7 @@ function cardTemplate(index, post) {
               <div class="card-comments" id="comments${index}">
               </div>
               <div class="card-input-div">
-                <input value="" oninput="toggleInputButton(${index})" onkeyup="handleKeyPress(${index}, event)" id="card-input${index}" type="text" placeholder="Kommentieren ..." max="250" />
+                <input value="" oninput="toggleInputButton(${index}, this)" id="card-input${index}" type="text" placeholder="Kommentieren ..." max="250" />
                 <button class="card-input-div-button d-none" id="card-button${index}" onclick="addComment(${index})">Posten</button>
               </div>
               <div class="div-border">
