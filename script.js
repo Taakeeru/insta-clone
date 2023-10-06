@@ -85,7 +85,7 @@ function addComment(index) {
 
 function handleKeyPress(index, event) {
   if (event.key === "Enter") {
-    return addComment(index);
+    addComment(index);
   }
 }
 
