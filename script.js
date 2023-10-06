@@ -95,6 +95,15 @@ function changeLike() {
 }
 
 
+function save() {
+  localStorage
+}
+
+function load() {
+  localStorage
+}
+
+
 function toggleInputButton(i) {
   let input = document.getElementById(`card-input${i}`);
   let button = document.getElementById(`card-button${i}`);
