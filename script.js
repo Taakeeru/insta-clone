@@ -96,11 +96,20 @@ function changeLike() {
 
 
 function save() {
-  localStorage
+  let postsAsText = JSON.stringify(posts);
+
+      localStorage.setItem('names', namesAsText);
+      localStorage.setItem('phoneNumbers', phoneNumbersAsText);
 }
 
 function load() {
-  localStorage
+  let namesAsText = localStorage.getItem('names');
+  let phoneNumbersAsText = localStorage.getItem('phoneNumbers');
+
+  if (namesAsText && phoneNumbersAsText) {
+      names = JSON.parse(namesAsText);
+      phoneNumbers = JSON.parse(phoneNumbersAsText);
+    }
 }
 
 
