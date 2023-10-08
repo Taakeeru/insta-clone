@@ -128,8 +128,8 @@ function handleKeyPress(index, event) {
 // }
 
 
-function changeLike() {
-
+function changeLike(index) {
+  
 }
 
 
