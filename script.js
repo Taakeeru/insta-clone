@@ -90,50 +90,42 @@ function handleKeyPress(index, event) {
   if (event.key === "Enter") {
     addComment(index);
   }
-
-  if (event.key === "ArrowUp") {
-    previousCard(index);
-  }
-
-  if (event.key === "ArrowDown") {
-    nextCard(index);
-  }
 }
 
 
-document.onkeyup = function handleKeyPress2(event, index) {
+// document.onkeyup = function handleKeyPress2(event, index) {
 
-  if (event.key === "ArrowLeft") {
-    return previousCard(index);
-  }
+//   if (event.key === "ArrowLeft") {
+//     return previousCard(index);
+//   }
 
-  if (event.key === "ArrowRight") {
-    return nextCard(index);
-  }
-}
-
-
-function nextCard(index) {
-  let currentCard = document.getElementById(posts[index]);
-
-    currentCard++;
-    if (currentCard <= 3) {
-      currentCard++;
-    } else {
-      currentCard = 0;
-    }
-}
+//   if (event.key === "ArrowRight") {
+//     return nextCard(index);
+//   }
+// }
 
 
-function previousCard(index) {
-  let currentCard = cards[index];
+// function nextCard(index) {
+//   let currentCard = document.getElementById(posts[index]);
 
-    if (currentCard >= 0) {
-      currentCard--;
-    } else {
-      currentCard = 3;
-    }
-}
+//     currentCard++;
+//     if (currentCard <= 3) {
+//       currentCard++;
+//     } else {
+//       currentCard = 0;
+//     }
+// }
+
+
+// function previousCard(index) {
+//   let currentCard = cards[index];
+
+//     if (currentCard >= 0) {
+//       currentCard--;
+//     } else {
+//       currentCard = 3;
+//     }
+// }
 
 
 function changeLike() {
