@@ -164,3 +164,52 @@ function cardTemplate(index, post) {
               </div>
             </div>`
 }
+
+function cardTemplate2(index, post, comment) {
+    return /*html*/`
+          <div>
+            <div class="card" id="card${index}">
+              <div class="card-title-row">
+                <img
+                  class="card-title-row-img1"
+                  src="${post['profileimg']}"
+                  alt="Account Bild"
+                />
+                <div class="card-title-row-div">
+                  <p>${post['author']}</p>
+                  <span>${post['location']}</span>
+                </div>
+                <img
+                  class="white-outline"
+                  src="./img/icons/dots.svg"
+                  alt="Punkte Icon"
+                />
+              </div>
+              <div class="card-image">
+                <img src="${post['image']}" alt="Account Bild" />
+              </div>
+              <div class="card-icon-row white-outline">
+                <div class="icon-margin">
+                  <img onclick="changeLike()" src="./img/icons/heart.svg" alt="Herz Icon" /><img
+                    src="./img/icons/comment.svg"
+                    alt="Chat Icon"
+                  /><img src="./img/icons/share.svg" alt="Teilen Icon" />
+                </div>
+                <div>
+                  <img src="./img/icons/bookmark.svg" alt="Buchmarke Icon" />
+                </div>
+              </div>
+              <div class="card-likes"><span>Gefällt ${post['likes']} Mal</span></div>
+              <div class="card-description"><span>${post['description']}</span></div>
+              <div class="card-hashtags"><a>${post['hashtags']}</a></div>
+              <div class="card-comments" id="comments${index}">
+              </div>
+              <div class="card-input-div">
+                <input value="" oninput="toggleInputButton(${index}, this)" id="card-input${index}" type="text" placeholder="Kommentieren ..." max="250" />
+                <button class="card-input-div-button d-none" id="card-button${index}" onclick="addComment(${index})">Posten</button>
+              </div>
+              <div class="div-border">
+              </div>
+            </div>
+          </div>`
+}
