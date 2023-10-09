@@ -44,9 +44,7 @@ let posts = [
         'comments': ''
     }
 ];
-
-let cards = [];
-let currentCard = 0;
+load();
 
 
 function render() {
@@ -82,6 +80,7 @@ function addComment(index) {
 
     posts[index]['comments'].push(newComment);
     render();
+    save();
   }
 }
 
@@ -129,25 +128,26 @@ function handleKeyPress(index, event) {
 
 
 function changeLike(index) {
-  
+  let heart = document.getElementById(`heart${index}`)
+
+    if (heart.src == "./img/icons/heart.svg") {
+      heart.src += "./img/icons/heart-red.png";
+      render();
+    }
 }
 
 
 function save() {
   let postsAsText = JSON.stringify(posts);
-
-      localStorage.setItem('names', namesAsText);
-      localStorage.setItem('phoneNumbers', phoneNumbersAsText);
+  localStorage.setItem('posts', postsAsText);
 }
 
 function load() {
-  let namesAsText = localStorage.getItem('names');
-  let phoneNumbersAsText = localStorage.getItem('phoneNumbers');
+  let postsAsText = localStorage.getItem('posts');
 
-  if (namesAsText && phoneNumbersAsText) {
-      names = JSON.parse(namesAsText);
-      phoneNumbers = JSON.parse(phoneNumbersAsText);
-    }
+  if (postsAsText) {
+    posts = JSON.parse(postsAsText); 
+  }
 }
 
 
@@ -196,7 +196,7 @@ function cardTemplate(index, post) {
               </div>
               <div class="card-icon-row white-outline">
                 <div class="icon-margin">
-                  <img onclick="changeLike()" src="./img/icons/heart.svg" alt="Herz Icon" /><img
+                  <img id="heart${index}" onclick="changeLike(${index})" src="./img/icons/heart.svg" alt="Herz Icon" /><img
                     src="./img/icons/comment.svg"
                     alt="Chat Icon"
                   /><img src="./img/icons/share.svg" alt="Teilen Icon" />
