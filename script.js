@@ -37,7 +37,7 @@ let posts = [
         'likes': `85`,
         'description': '',
         'hashtags': '#Zürich #Hooka',
-        'comments': ''
+        'comments': []
     }
 ];
 load();
@@ -150,7 +150,7 @@ function checkLike(index) {
 }
 
 
-// mit einem klick -> filerwechsel,bildwechsel,booleanwechsel und speichern/laden, likeanzahl -/+ speichern/laden 
+// mit einem klick -> booleanwechsel(filerwechsel,bildwechsel) und speichern/laden, likeanzahl -/+ speichern/laden 
 function changeLikeNumber(index) {
   let isLiked = posts[index]['isLiked'];
   let currentLikes = parseInt(posts[index]['likes']);
