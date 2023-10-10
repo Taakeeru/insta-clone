@@ -101,41 +101,6 @@ function toggleInputButton(i) {
 }
 
 
-// document.onkeyup = function handleKeyPress2(event, index) {
-
-//   if (event.key === "ArrowLeft") {
-//     return previousCard(index);
-//   }
-
-//   if (event.key === "ArrowRight") {
-//     return nextCard(index);
-//   }
-// }
-
-
-// function nextCard(index) {
-//   let currentCard = document.getElementById(posts[index]);
-
-//     currentCard++;
-//     if (currentCard <= 3) {
-//       currentCard++;
-//     } else {
-//       currentCard = 0;
-//     }
-// }
-
-
-// function previousCard(index) {
-//   let currentCard = cards[index];
-
-//     if (currentCard >= 0) {
-//       currentCard--;
-//     } else {
-//       currentCard = 3;
-//     }
-// }
-
-
 function checkLike(index) {
   let isLiked = posts[index]['isLiked'];
   let heart = document.getElementById(`heart${index}`);
@@ -150,7 +115,6 @@ function checkLike(index) {
 }
 
 
-// mit einem klick -> booleanwechsel(filerwechsel,bildwechsel) und speichern/laden, likeanzahl -/+ speichern/laden 
 function changeLikeNumber(index) {
   let isLiked = posts[index]['isLiked'];
   let currentLikes = parseInt(posts[index]['likes']);
