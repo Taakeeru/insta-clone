@@ -218,6 +218,14 @@ p {
   cursor: default !important;
 }
 
+.logo-div {
+  display: none;
+}
+
+.insta-logo {
+  display: none;
+}
+
 .navbar-side img {
     height: 30px;
     width: auto;
@@ -552,3 +560,78 @@ p {
   margin-top: 20px;
 }
 /* END of Suggestion Settings */
+
+/* START of Mediaquerrys */
+@media(max-width: 1380px) {
+  .navbar-side {
+    width: 210px;
+  }
+
+  .main-container {
+    padding-left: 210px;
+  }
+}
+
+@media(max-width: 1275px) {
+  .navbar-side {
+    width: 60px;
+    margin-left: 0;
+  }
+
+  .main-container {
+    padding-left: 60px;
+  }
+  
+  .navbar-side span {
+    display: none;
+  }
+
+  .heading-div {
+    display: none;
+  }
+
+  .heading-div h1 {
+    display: none;
+  }
+
+  .logo-div {
+    display: flex;
+    margin-bottom: 40px !important;
+  }
+
+  .insta-logo {
+    display: flex;
+  }
+
+}
+
+@media(max-width: 1120px) {
+  .suggestions-side {
+    display: none;
+  }
+}
+
+@media(max-width: 710px) {
+  .navbar-side {
+    margin-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.158);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+  }
+
+  .logo-div {
+    display: flex;
+    margin-bottom: 0px !important;
+  }
+
+  .main-container {
+    padding-left: 0;
+  }
+}
