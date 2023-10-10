@@ -718,6 +718,11 @@ p {
   .reel-bar img {
     overflow-x: hidden;
   }
+
+  .div-border {
+    width: 90vw;
+    min-width: 350px;
+  }
 }
 
 @media (max-width: 425px) {
